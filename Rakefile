@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "cmon"
-    gem.summary = %Q{TODO}
+    gem.summary = "HTML preprocessor for stable, cross-browser layouts"
     gem.email = "aanand.prasad@gmail.com"
     gem.homepage = "http://github.com/aanand/cmon"
     gem.authors = ["Aanand Prasad"]
