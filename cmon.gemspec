@@ -22,10 +22,13 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/cmon",
+     "cmon.gemspec",
      "lib/cmon.rb",
+     "lib/cmon/rack.rb",
      "test/cmon_test.rb",
      "test/fixtures/index.html",
      "test/fixtures/index.out.html",
+     "test/rack_test.rb",
      "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/aanand/cmon}
@@ -35,6 +38,7 @@ Gem::Specification.new do |s|
   s.summary = %q{HTML preprocessor for stable, cross-browser layouts}
   s.test_files = [
     "test/cmon_test.rb",
+     "test/rack_test.rb",
      "test/test_helper.rb"
   ]
 
@@ -43,8 +47,11 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<hpricot>, [">= 0"])
     else
+      s.add_dependency(%q<hpricot>, [">= 0"])
     end
   else
+    s.add_dependency(%q<hpricot>, [">= 0"])
   end
 end
