@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+
+require 'rubygems'
+require 'cmon'
+
+puts Cmon.process(STDIN.tty? ? ARGF : STDIN)
+
