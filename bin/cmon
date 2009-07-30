@@ -5,5 +5,13 @@ $:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'rubygems'
 require 'cmon'
 
-puts Cmon.process(STDIN.tty? ? ARGF : STDIN)
+if STDIN.tty?
+  if ARGV.empty?
+    STDERR.puts "usage: cmon [FILES...] (or provide input on stdin)"
+  else
+    puts Cmon.process(ARGF)
+  end
+else
+  puts Cmon.process(STDIN)
+end
 
