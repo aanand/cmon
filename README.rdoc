@@ -1,6 +1,48 @@
 = cmon
 
-Description goes here.
+cmon is an HTML preprocessor that adds powerful layout capabilities to your markup. With cmon, you can engineer solid, cross-browser layouts that in CSS would require hours of writing and debugging browser-specific behaviour.
+
+To use cmon, embed simple tags in your markup. cmon will then compile these to clean, valid HTML.
+
+== Example
+
+cmon understands 3 tags: +cmon+, +baby+ and +yeah+. It also understands 2 attributes: +babyspan+ and +yeahspan+.
+
+    <cmon>
+        <baby>
+            <yeah yeahspan="3">Header</yeah>
+        </baby>
+
+        <baby>
+            <yeah>Left column</yeah>
+            <yeah>Middle column</yeah>
+            <yeah>Right column</yeah>
+        </baby>
+
+        <baby>
+            <yeah yeahspan="3">Footer</yeah>
+        </baby>
+    </cmon>
+
+This (very simplistic) example will produce a 3-column layout. With a sprinkling of CSS, this will be ready for production use.
+
+== Usage
+
+cmon comes with a  command-line executable. It can take files specified on the command line or from standard in. The compiled code is provided on standard out.
+
+    cmon index.html
+    cmon < index.html
+
+== Will it work with Rails?
+
+Yes! cmon comes with a drop-in Rack middleware component. Using it should be as simple as:
+
+    require 'cmon/rack'
+    use Cmon::Rack
+
+== Can I style cmon tags with CSS?
+
+At the moment, only by giving them classes (e.g. <tt><cmon class="foo"></tt>). However, a CSS processor is feasible.
 
 == Copyright
 
