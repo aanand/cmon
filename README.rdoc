@@ -47,6 +47,11 @@ cmon comes with a command-line executable. It can take files specified on the co
     cmon index.html
     cmon < index.html
 
+== Installation
+
+    gem sources -a http://gems.github.com/
+    sudo gem install aanand-cmon
+
 == Will it work with Rails?
 
 Yes! cmon comes with a drop-in Rack middleware component. Using it should be as simple as:
