@@ -30,15 +30,15 @@ This (very simplistic) example will produce a 3-column layout. With a sprinkling
 
 <tt><cmon></tt>-oriented layout has several interesting features:
 
-- All <tt><yeah></tt>s in a <tt><baby></tt> are always the same height. This makes equal-height columnar layouts trivial.
+All <tt>yeah</tt>s in a <tt>baby</tt> are always the same height. This makes <b>equal-height columnar layouts</b> trivial.
 
-- The height of <tt><baby></tt> tags and width of <tt><yeah></tt> tags is automatically calculated depending on the width and height of the <tt><cmon></tt> and the size of the content. This makes it trivial, for example, to arrange an arbitrary number of equally-sized elements horizontally, with even distribution. In CSS, this would necessitate ugly explicit widths (percentages at best; absolute values or extra markup if you were hoping to specify some padding).
+The height of <tt>baby</tt> tags and width of <tt>yeah</tt> tags is automatically calculated depending on the width and height of the <tt>cmon</tt> and the size of the content. This makes it trivial, for example, to <b>arrange an arbitrary number of equally-sized elements horizontally, with even distribution</b>. In CSS, this would necessitate ugly explicit widths (percentages at best; absolute values or extra markup if you were hoping to specify some padding).
 
-- Heights and widths of individual <tt><baby></tt>s and <tt><yeah></tt>s can be explicitly specified (in CSS, as either absolute or percentage values). <tt><baby></tt>s and <tt><yeah></tt>s for which a height/width has not been specified will still be sized automatically.
+Heights and widths of individual <tt>baby</tt>s and <tt>yeah</tt>s can be explicitly specified (in CSS, as either absolute or percentage values). <tt>baby</tt>s and <tt>yeah</tt>s for which a height/width has not been specified will still be sized automatically.
 
-- CSS +height+ and +width+ properties for <tt><cmon></tt>, <tt><baby></tt> and <tt><yeah></tt> tags apply to the full height and width of the element, not the content. This is like the proposed <tt>box-sizing: border-box;</tt> declaration in CSS3, except it works now, in all browsers!
+CSS +height+ and +width+ properties for <tt>cmon</tt>, <tt>baby</tt> and <tt>yeah</tt> elements apply to the <b>full height and width of the element, not the content</b>. This is like the proposed <tt>box-sizing: border-box;</tt> declaration in CSS3, except it works now, in all browsers!
 
-- Content inside <tt><yeah></tt>s can be trivially vertically-aligned by simply applying <tt>vertical-align: middle;</tt> to the <tt><yeah></tt> element. That's right: vertical alignment that just works, in all browsers.
+Content inside <tt>yeah</tt>s can be trivially vertically-aligned by simply applying <tt>vertical-align: middle;</tt> to the <tt>yeah</tt> element. That's right: <b>vertical alignment that just works, in all browsers</b>.
 
 == Usage
 
