@@ -1,7 +1,18 @@
 require 'hpricot'
 
-class Cmon
+module Cmon
   class << self
+    # Processes <tt><cmon></tt> tags in +source+ (a String or IO object) and returns the final HTML.
+    def process(source)
+      doc = Hpricot(source)
+
+      process_element(doc.root)
+
+      doc.to_html
+    end
+
+    private
+
     ELEMENT_MAPPING = {
       'cmon' => 'table',
       'baby' => 'tr',
@@ -12,14 +23,6 @@ class Cmon
       'babyspan' => 'rowspan',
       'yeahspan' => 'colspan'
     }
-
-    def process(target)
-      doc = Hpricot(target)
-
-      process_element(doc.root)
-
-      doc.to_html
-    end
 
     def process_element(element)
       return unless element.elem?
